@@ -8,6 +8,10 @@ class Post(models.Model):
         'auth.User',
         on_delete=models.CASCADE,
     )
+    call_date = models.DateField(default=None)
+    denomination = models.CharField(max_length=25, default=None)
+    city = models.CharField(max_length=25, default=None)
+    state = models.CharField(max_length=15, default=None)
     body = models.TextField()
 
 
